@@ -13,8 +13,10 @@ if(!(argv.help === undefined)){
 	helpArticle.printHelp();
 }else {
 	try{
+		// Processing arguments passed.
 		global.args = new Argument(argv);
 		args.processArgument();
+		// Peocessing excel passed.
 		excel.readExcelFile(config.defaultInputFolder+argv.fileName);
 	}catch (error) {
 		console.log(error);
