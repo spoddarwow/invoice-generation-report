@@ -1,4 +1,4 @@
-/* Month */
+/* Date util */
 
 // Private.
 var month = new Array();
@@ -16,9 +16,9 @@ var month = new Array();
 	month[11] = "Dec";
 var argumentMonth;
 // Public
-module.exports = Month;
+module.exports = DateUtil;
 
-function Month(argsMonth){
+function DateUtil(argsMonth){
 	this.argumentMonth = argsMonth;
 	if((!(this.argumentMonth === undefined)) &&
 		(this.argumentMonth < 1 || this.argumentMonth > 12)) {
@@ -27,7 +27,15 @@ function Month(argsMonth){
 	this.argumentMonth = argsMonth;
 }
 
-Month.prototype.getMonth = function getMonth() {
+DateUtil.prototype.getCurrentDate = function getCurrentDate() {
+	return new Date();
+}
+
+DateUtil.prototype.getCurrentDateForDisplay = function getCurrentDateForDisplay() {
+	
+}
+
+DateUtil.prototype.getMonth = function getMonth() {
 	var index;
 	if(this.argumentMonth === undefined){
 		index = new Date().getMonth();
@@ -41,4 +49,3 @@ function getThisMonthsName(index) {
 	
 	return month[index];
 }
-
