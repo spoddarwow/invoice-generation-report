@@ -1,0 +1,16 @@
+{
+  "name": "mor-generate-invoice",
+  "version": "1.0.0",
+  "description": "This nodejs application will be used to read billing sheet of MOR and create invoice PDF",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sumit Poddar",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^0.2.32",
+    "minimist": "^1.2.0",
+    "winston": "^2.2.0"
+  }
+}
