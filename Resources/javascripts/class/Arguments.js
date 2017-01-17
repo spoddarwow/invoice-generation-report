@@ -14,14 +14,15 @@ module.exports = Argument;
 
 function Argument(args) {
 	this.argument = args;
-	//fileAndFolder = new FileAndFolderUtil(this.argument);
-	//dateUtil = new DateUtil(this.argument.month);
 }
 
 
 Argument.prototype.processArgument = function() {
 	// File & Folder
-	FileAndFolderUtil.getInstance().processArgument(this.argument);
-	//console.log(month.getMonth());
+	FileAndFolderUtil.processArgument(this.argument);
+	// Date & Month
+	DateUtil.processArgument(this.argument.month);
+
+	
 }
 

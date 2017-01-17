@@ -1,5 +1,5 @@
 /* Date util */
-
+var dateFormat = require('dateformat');
 // Private.
 var month = new Array();
 	month[0] = "Jan";
@@ -14,38 +14,54 @@ var month = new Array();
 	month[9] = "Oct";
 	month[10] = "Nov";
 	month[11] = "Dec";
-var argumentMonth;
+
+var DateUtil = function DateUtil(){
+
+	var argumentMonth;
+	
+	this.processArgument = function(argsMonth) {
+		this.argumentMonth = argsMonth;
+		if((!(this.argumentMonth === undefined)) &&
+			(this.argumentMonth < 1 || this.argumentMonth > 12)) {
+			throw('Invalid month passed : '+ this.argumentMonth);
+		}
+		this.argumentMonth = argsMonth;
+	}
+
+	this.getMonth = function getMonth() {
+		var index;
+		if(this.argumentMonth === undefined){
+			index = new Date().getMonth();
+		}else {
+			index = this.argumentMonth - 1;
+		}
+		return getThisMonthsName(index);
+	}
+
+	this.getCurrentDate = function getCurrentDate() {
+		return new Date();
+	}
+
+	this.getOutputFolderName = function(){
+		var year = dateFormat(new Date(), "yy");
+		return this.getMonth()+'-'+year;
+	}
+
+	/* Private method */
+	function getThisMonthsName(index) {
+	
+		return month[index];
+	}
+}
+
+DateUtil.instance = null;
+
+DateUtil.getInstance = function () {
+    if (this.instance === null) {
+        this.instance = new DateUtil();
+    }
+    return this.instance;
+}
+
 // Public
-module.exports = DateUtil;
-
-function DateUtil(argsMonth){
-	this.argumentMonth = argsMonth;
-	if((!(this.argumentMonth === undefined)) &&
-		(this.argumentMonth < 1 || this.argumentMonth > 12)) {
-		throw('Invalid month passed : '+ this.argumentMonth);
-	}
-	this.argumentMonth = argsMonth;
-}
-
-DateUtil.prototype.getCurrentDate = function getCurrentDate() {
-	return new Date();
-}
-
-DateUtil.prototype.getCurrentDateForDisplay = function getCurrentDateForDisplay() {
-	
-}
-
-DateUtil.prototype.getMonth = function getMonth() {
-	var index;
-	if(this.argumentMonth === undefined){
-		index = new Date().getMonth();
-	}else {
-		index = this.argumentMonth - 1;
-	}
-	return getThisMonthsName(index);
-}
-
-function getThisMonthsName(index) {
-	
-	return month[index];
-}
+module.exports = DateUtil.getInstance();

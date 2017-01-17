@@ -9,6 +9,7 @@
   "author": "Sumit Poddar",
   "license": "ISC",
   "dependencies": {
+    "dateformat": "^2.0.0",
     "exceljs": "^0.2.32",
     "minimist": "^1.2.0",
     "winston": "^2.2.0"
