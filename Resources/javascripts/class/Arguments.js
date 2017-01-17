@@ -1,17 +1,27 @@
 /* Process and validate arugument passed */
-var Month = require('./Month.js');
-//Private
-var argument = null;
-var month;
 
+//Private
+var argument;
+
+/*
+var Argument = {
+	var dateUtil;
+	var fileAndFolder;
+}
+*/
 //Public
 module.exports = Argument;
+
 function Argument(args) {
 	this.argument = args;
-	month = new Month(this.argument.month);
+	//fileAndFolder = new FileAndFolderUtil(this.argument);
+	//dateUtil = new DateUtil(this.argument.month);
 }
 
 
-Argument.prototype.processArgument = function processArgument() {
-	console.log(month.getMonth());
+Argument.prototype.processArgument = function() {
+	// File & Folder
+	FileAndFolderUtil.getInstance().processArgument(this.argument);
+	//console.log(month.getMonth());
 }
+

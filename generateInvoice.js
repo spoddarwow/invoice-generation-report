@@ -1,11 +1,12 @@
 /* All Requires */
 global.logger = require('./Resources/javascripts/logger.js');
 var excel = require('./Resources/javascripts/excel.js');
-global.config = require('./Resources/config/config.js');
 var helpArticle = require('./Resources/javascripts/help.js');
 var Argument = require('./Resources/javascripts/class/Arguments.js');
 var argv = require('minimist')(process.argv.slice(2));
-
+global.config = require('./Resources/config/config.js');
+global.DateUtil = require('./Resources/javascripts/class/DateUtil.js');
+global.FileAndFolderUtil = require('./Resources/javascripts/class/FileAndFolder.js');
 
 // Process starts
 console.log("-=-=-=-= Welcome to MOR Invoice Generation -=-=-=-=");
@@ -17,7 +18,7 @@ if(!(argv.help === undefined)){
 		global.args = new Argument(argv);
 		args.processArgument();
 		// Peocessing excel passed.
-		excel.readExcelFile(config.defaultInputFolder+argv.fileName);
+		excel.readExcelFile(args.fileAndFolder.getFileToProcess());
 	}catch (error) {
 		console.log(error);
     	logger.error(error)

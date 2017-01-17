@@ -1,4 +1,4 @@
 module.exports = {
     
-    defaultInputFolder : './Files/Input/Excel/'
+    defaultInputFolder : './Files/Input/Excel'
 }
