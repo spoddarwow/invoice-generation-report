@@ -1,6 +1,6 @@
 /* All Requires */
 global.logger = require('./Resources/javascripts/logger.js');
-var excel = require('./Resources/javascripts/excel.js');
+var ExcelProcessor = require('./Resources/javascripts/ExcelProcessor.js');
 var helpArticle = require('./Resources/javascripts/help.js');
 var Argument = require('./Resources/javascripts/class/Arguments.js');
 var argv = require('minimist')(process.argv.slice(2));
@@ -18,7 +18,8 @@ if(!(argv.help === undefined)){
 		var args = new Argument(argv);
 		args.processArgument();
 		// Processing excel passed.
-		//excel.readExcelFile(args.fileAndFolder.getFileToProcess());
+		var excel = new ExcelProcessor();
+		excel.createInvoice();
 	}catch (error) {
 		console.log(error);
     	logger.error(error)
