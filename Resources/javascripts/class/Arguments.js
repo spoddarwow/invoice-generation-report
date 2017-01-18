@@ -3,12 +3,6 @@
 //Private
 var argument;
 
-/*
-var Argument = {
-	var dateUtil;
-	var fileAndFolder;
-}
-*/
 //Public
 module.exports = Argument;
 

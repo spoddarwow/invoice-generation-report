@@ -15,9 +15,9 @@ if(!(argv.help === undefined)){
 }else {
 	try{
 		// Processing arguments passed.
-		global.args = new Argument(argv);
+		var args = new Argument(argv);
 		args.processArgument();
-		// Peocessing excel passed.
+		// Processing excel passed.
 		//excel.readExcelFile(args.fileAndFolder.getFileToProcess());
 	}catch (error) {
 		console.log(error);
