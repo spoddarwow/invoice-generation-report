@@ -8,6 +8,7 @@ global.config = require('./Resources/config/config.js');
 global.DateUtil = require('./Resources/javascripts/class/DateUtil.js');
 global.FileAndFolderUtil = require('./Resources/javascripts/class/FileAndFolderUtil.js');
 
+var success = true;
 // Process starts
 console.log("-=-=-=-= Welcome to MOR Invoice Generation -=-=-=-=");
 if(!(argv.help === undefined)){
@@ -19,9 +20,13 @@ if(!(argv.help === undefined)){
 		args.processArgument();
 		// Processing excel passed.
 		var excel = new ExcelProcessor();
-		excel.createInvoice();
+		success = excel.createInvoice();
+		console.log(success);
+		if(success){
+			console.log("-=-=-=-= Mor Invoice has been generated -=-=-=-=");
+		}
 	}catch (error) {
-		console.log(error);
+		success = false;
     	logger.error(error)
 	}
 }
@@ -41,5 +46,5 @@ if(!(argv.help === undefined)){
 
 
 
-console.log("-=-=-=-= Mor Invoice has been generated -=-=-=-=");
+
 

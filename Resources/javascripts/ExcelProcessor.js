@@ -5,24 +5,42 @@ var ExcelProcessor = function ExcelProcessor() {
     // Private
 
     this.createInvoice = function(){
-        readExcelFile();
+        try{
+            var excelDataAsJson = processExcelAndConvertToJson(); 
+            return true;  
+        }catch(err){
+            throw(err);
+            return false;
+        }
+        
     }
 
     this.updateInvoiceSheet = function(){
     }
 
+    function processExcelAndConvertToJson(){
+        var jsonData = "";
+        try {
+            readExcelFile();    
+        }catch(err){
+            throw(err);
+        }
+        
+    }
+
     function readExcelFile() {
-        var workbook = new excel.Workbook(); 
-        workbook.xlsx.readFile(FileAndFolderUtil.getFileToProcess())
-            .then(function() {
-                    workbook.eachSheet(function(worksheet, sheetId) {
-                        console.log(worksheet.name);
-                        worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
-                                console.log(row.values);
-                        });
+        try{
+            var workbook = new excel.Workbook(); 
+            workbook.xlsx.readFile(FileAndFolderUtil.getFileToProcess())
+                .then(function() {
+                    var worksheet = workbook.getWorksheet(1);
+                    worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
+                        console.log(row.values[4]);
                     });
-                    
-            });
+                });   
+        }catch(err){
+            throw(err);
+        }
     }
 
     function writeInvoice(){
