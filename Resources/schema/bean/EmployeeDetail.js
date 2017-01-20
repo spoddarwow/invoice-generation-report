@@ -3,6 +3,7 @@
 function EmployeeDetail(){
 
 	var name;
+	var location;
 	var billingRate;
 	var noOfDays;
 }
@@ -14,6 +15,14 @@ EmployeeDetail.prototype.setName = function(employeeName) {
 
 EmployeeDetail.prototype.getName = function() {
 	return this.name;
+};
+
+EmployeeDetail.prototype.setLocation = function(employeeLocation) {
+	this.location = location;
+};
+
+EmployeeDetail.prototype.getLocation = function() {
+	return this.location;
 };
 
 EmployeeDetail.prototype.setBillingRate = function(employeeBilingRate) {

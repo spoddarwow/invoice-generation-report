@@ -9,6 +9,10 @@ var Config = function Config(){
 	this.getDefaultOutputFolder = function() {
 		return './Files/Output'
 	}
+
+	this.getJSONSchemaFilePath = function(){
+		return './Resources/schema/ExcelJsonSchema.json';
+	}
 }
 
 Config.instance = null;
