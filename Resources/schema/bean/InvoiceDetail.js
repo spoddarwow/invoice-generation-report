@@ -6,7 +6,12 @@ function InvoiceDetail(){
 
 
 ProjectDetail.prototype.addInvoiceProjectDetail = function(invoice){
-	this.invoiceProjectDetail.push(invoice)
+	if(invoice instanceof ProjectDetail){
+		this.invoiceProjectDetail.push(invoice)
+	}else {
+		throw new Error('Failed due to invalid object of invoice.');
+	}
+	
 }
 
 ProjectDetail.prototype.getInvoiceProjectDetail = function(){

@@ -1,10 +1,13 @@
 /* Excel */
 var excel = require('exceljs');
 var fs = require('fs');
+var _ = require('underscore');
+
 
 var ExcelProcessor = function ExcelProcessor() {
     // Private
-
+    var invoiceDetailMap = {};
+    var firstRow;
     this.createInvoice = function(){
         try{
             var excelDataAsJson = processExcelAndConvertToJson(); 
@@ -22,7 +25,8 @@ var ExcelProcessor = function ExcelProcessor() {
     function processExcelAndConvertToJson(){
         var jsonData = "";
         try {
-            readExcelFile();    
+            readExcelFile();
+
         }catch(err){
             throw(err);
         }
@@ -30,25 +34,33 @@ var ExcelProcessor = function ExcelProcessor() {
     }
 
     function readExcelFile() {
+        
         try{
             var workbook = new excel.Workbook(); 
             workbook.xlsx.readFile(FileAndFolderUtil.getFileToProcess())
                 .then(function() {
                     var worksheet = workbook.getWorksheet(1);
-                    var firstRow = worksheet.getRow(1).values;
+                    firstRow = worksheet.getRow(1).values;
                     if(firstRow === undefined || firstRow == [] || firstRow.length == 0){
                         throw new Error('First Row is blank. Please add the column title in the first row. Try help (--help) to know the mandatory column and its title.');
                     }else {
+                        firstRow = inverseArray(firstRow);
                         var jsonSchema = readJSONSchema(config.getJSONSchemaFilePath());
-                        if(jsonSchema == ''){
-                            var jsonSchemaExcelTitle = getExcelTitleFromSchema(jsonSchema);
-                            console.log(Object.keys(jsonSchema[0].onshore[0]));
-                            updateJsonSchemaWithColumnIndex(jsonSchema,firstRow);
+                        if(jsonSchema != ''){
+                            jsonSchema = updateJsonSchemaWithColumnIndex(jsonSchema,firstRow);
                         }
                     }
                     
                     worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
-                        //console.log(row.values[4]);
+                        if(rowNumber > 1) {
+                            var invoiceArray = [];
+                            if((!(invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] === undefined)) 
+                                    && invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]].length > 0) {
+                                invoiceArray = invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]];
+                            }
+                            invoiceArray[invoiceArray.length]=row.values;
+                            invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] = invoiceArray;
+                        }
                     });
                 });   
         }catch(err){
@@ -69,23 +81,40 @@ var ExcelProcessor = function ExcelProcessor() {
 
     // Returns the JSON schema after reading if from the path.
     function readJSONSchema(schamaFilePath){
-        /*var object;
-        try {
-            JSON.parse(fs.readFileSync(schamaFilePath, 'utf8'));
-        }catch(err){
-            throw new Error("Exception while reading JSON Schema file. Either the Schema file is missing, file is empty or invalid format. "+ err);
-        }*/
         return JSON.parse(fs.readFileSync(schamaFilePath, 'utf8'));;
     }
 
-    // Update JSON schema with column index of excel file.
-    function updateJsonSchemaWithColumnIndex(jsonSchema,firstRow){
+    // Get Array of column title from Schema.
+    function updateJsonSchemaWithColumnIndex(jsonSchema, firstRow){
+        var jsonKey  = Object.keys(jsonSchema);
+        var title = '';
+        if(jsonKey.length > 0){
+            for (var i = 0; i < jsonKey.length; i++) {
+                var key = jsonKey[i];
+                var value = jsonSchema[key];
+                if(value .length > 0){
+                    value = value[0];
+                }
 
+                var title = value.excelColumnTitle;
+                if(title.includes("_month_")) {
+                    title = title.replace('_month_', DateUtil.getMonth());
+                }
+
+                if(!(firstRow[title] === undefined)){
+                    value.columnIndex = firstRow[title];
+                    jsonSchema[key] = value;
+                }else {
+                    //throw new Error('Invalid column title in excel sheet. Column title should be '+value.excelColumnTitle);
+                }
+            }
+        }
+        return jsonSchema;
     }
 
-    // Get Array of column title from Schema.
-    function getExcelTitleFromSchema(jsonSchema){
-
+    // Inverse the key-value to value-key. Example, 1 = Project to Project = 1.
+    function inverseArray(firstRow){
+        return _.invert(firstRow);
     }
 };
 

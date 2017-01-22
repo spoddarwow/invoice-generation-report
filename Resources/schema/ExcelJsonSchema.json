@@ -1,77 +1,47 @@
-[  
-   {  
-      "projectName":{  
-         "type":"string",
-         "excelColumnTitle":"Project",
-         "columnIndex":""
-      },
-      "projectCode":{  
-         "type":"string",
-         "excelColumnTitle":"Project Code",
-         "columnIndex":""
-      },
-      "pm":{  
-         "type":"string",
-         "excelColumnTitle":"Project Manager",
-         "columnIndex":""
-      },
-      "poNumber":{  
-         "type":"string",
-         "excelColumnTitle":"PO Number",
-         "columnIndex":""
-      },
-      "period":{  
-         "type":"string",
-         "excelColumnTitle":"Period",
-         "columnIndex":""
-      },
-      "onshore":[  
-         {  
-            "name":{  
-               "type":"string",
-         	   "excelColumnTitle":"Name",
-               "columnIndex":""
-            },
-            "location":{  
-               "type":"string",
-         	   "excelColumnTitle":"Location",
-               "columnIndex":""
-            },
-            "billingRate":{  
-               "type":"double",
-         	   "excelColumnTitle":"Billing rate",
-               "columnIndex":""
-            },
-            "noOfDays":{  
-               "type":"int",
-         	   "excelColumnTitle":"%Effort (_month_)%",
-               "columnIndex":""
-            }
-         }
-      ],
-      "offshore":[  
-         {  
-            "name":{  
-               "type":"string",
-         	   "excelColumnTitle":"Name",
-               "columnIndex":""
-            },
-            "location":{  
-               "type":"string",
-         	   "excelColumnTitle":"Location",
-               "columnIndex":""
-            },
-            "billingRate":{  
-               "type":"double",
-         	   "excelColumnTitle":"Billing rate",
-               "columnIndex":""
-            },
-            "noOfDays":{  
-               "type":"int",
-         	   "excelColumnTitle":"%Effort (_month_)%",
-               "columnIndex":""
-            }
-         }
-      ]
-   }
-]
+{  
+   "projectName":{  
+      "type":"string",
+      "excelColumnTitle":"Project",
+      "columnIndex":""
+   },
+   "projectCode":{  
+      "type":"string",
+      "excelColumnTitle":"Project Code",
+      "columnIndex":""
+   },
+   "pm":{  
+      "type":"string",
+      "excelColumnTitle":"PM",
+      "columnIndex":""
+   },
+   "poNumber":{  
+      "type":"string",
+      "excelColumnTitle":"PO Number",
+      "columnIndex":""
+   },
+   "period":{  
+      "type":"string",
+      "excelColumnTitle":"Period",
+      "columnIndex":""
+   },
+   "name":{  
+      "type":"string",
+      "excelColumnTitle":"Name",
+      "columnIndex":""
+   },
+   "location":{  
+      "type":"string",
+      "excelColumnTitle":"Location",
+      "columnIndex":""
+   },
+   "billingRate":{  
+      "type":"double",
+      "excelColumnTitle":"Billing rate",
+      "columnIndex":""
+   },
+   "noOfDays":{  
+      "type":"int",
+      "excelColumnTitle":"Projected Effort (_month_)",
+      "columnIndex":""
+   } 
+}

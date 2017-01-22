@@ -12,6 +12,7 @@
     "dateformat": "^2.0.0",
     "exceljs": "^0.2.32",
     "minimist": "^1.2.0",
+    "underscore": "^1.8.3",
     "winston": "^2.2.0"
   }
 }
