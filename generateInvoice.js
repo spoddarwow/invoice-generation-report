@@ -8,6 +8,16 @@ global.config = require('./Resources/config/config.js');
 global.DateUtil = require('./Resources/javascripts/class/DateUtil.js');
 global.FileAndFolderUtil = require('./Resources/javascripts/class/FileAndFolderUtil.js');
 
+var fs = require('fs');
+var htmlToPdf = require('html-to-pdf');
+
+
+
+//var pdf = require('html-pdf');
+//var options = { format: 'Letter' };
+ 
+
+
 var success = true;
 // Process starts
 console.log("-=-=-=-= Welcome to MOR Invoice Generation -=-=-=-=");
@@ -15,6 +25,26 @@ if(!(argv.help === undefined)){
 	helpArticle.printHelp();
 }else {
 	try{
+
+		fs.readFile('./Resources/invoiceHtml/SampleInvoice.html', 'utf8', function(err, html){
+			console.log(html);
+			/*pdf.create(html, options).toFile('./Resources/invoiceHtml/SampleInvoice.pdf', function(err, res) {
+			  if (err) return console.log(err);
+			  console.log(res); // { filename: '/app/businesscard.pdf' } 
+			});*/
+			htmlToPdf.convertHTMLString(html, './Resources/invoiceHtml/SampleInvoice.pdf',
+			    function (error, success) {
+			        if (error) {
+			            console.log('Oh noes! Errorz!');
+			            console.log(error);
+			        } else {
+			            console.log('Woot! Success!');
+			            console.log(success);
+			        }
+			    }
+			);
+		});
+
 		// Processing arguments passed.
 		var args = new Argument(argv);
 		args.processArgument();
