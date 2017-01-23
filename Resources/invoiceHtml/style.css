@@ -1,0 +1,408 @@
+sup {
+	vertical-align: baseline;
+	position: relative;
+	top: -0.4em;
+}
+sub {
+	vertical-align: baseline;
+	position: relative;
+	top: 0.4em;
+}
+.stl_01 {
+	border-style: none;
+	position: relative;
+	width: 595pt;
+	margin: 0pt;
+	height: 842pt;
+	display: inline-block;
+}
+.stl_02 {
+	position: absolute;
+	left: 0pt;
+	top: 0pt;
+}
+.stl_03 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 239.25pt;
+	top: 53.78997pt;
+}
+@font-face {
+	font-family:"IAWHGD+Arial-BoldMT";
+	src:url("41753b01-0000-0000-0000-000000000000.ttf");
+}
+.stl_04 {
+	color: #000000;
+	display: inline;
+	font-size: 9pt;
+	font-family: "Arial";
+	font-weight: bold;
+	line-height: 9.9px;
+}
+.stl_05 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 66.53996pt;
+}
+.stl_06 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 79.28996pt;
+}
+@font-face {
+	font-family:"DRQCMS+ArialMT";
+	src:url("552f389b-0000-0000-0000-000000000000.ttf");
+}
+.stl_07 {
+	color: #000000;
+	display: inline;
+	font-size: 9pt;
+	font-family: "Arial";
+}
+.stl_08 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 92.03996pt;
+}
+.stl_09 {
+	position: absolute;
+	line-height: 12pt;
+	left: 50.25pt;
+	top: 104.79pt;
+}
+.stl_10 {
+	position: absolute;
+	line-height: 11.25052pt;
+	left: 195.75pt;
+	top: 128.2499pt;
+}
+@font-face {
+	font-family:"TNSVRN+Inconsolata-Regular";
+	src:url("b477b82c-0000-0000-0000-000000000000.ttf");
+}
+.stl_11 {
+	color: #000000;
+	display: inline;
+	font-size: 10.5pt;
+	font-family: "TNSVRN+Inconsolata-Regular";
+}
+.stl_12 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 130.29pt;
+}
+.stl_13 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 159.8696pt;
+}
+.stl_14 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 312.75pt;
+	top: 130.29pt;
+}
+.stl_15 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 416.25pt;
+	top: 130.29pt;
+}
+.stl_16 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 312.75pt;
+	top: 152.9603pt;
+}
+.stl_17 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 312.75pt;
+	top: 164.04pt;
+}
+.stl_18 {
+	position: absolute;
+	line-height: 10.15942pt;
+	left: 195.75pt;
+	top: 160.0144pt;
+}
+.stl_19 {
+	color: #000000;
+	display: inline;
+	font-size: 9.5pt;
+	font-family: "Arial";
+}
+.stl_20 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 392.25pt;
+	top: 160.04pt;
+}
+.stl_21 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 191.3696pt;
+}
+.stl_22 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 202.5pt;
+	top: 191.3696pt;
+}
+.stl_23 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 312.75pt;
+	top: 191.3696pt;
+}
+.stl_24 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 357.75pt;
+	top: 201.4491pt;
+}
+.stl_25 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 438pt;
+	top: 191.3696pt;
+}
+.stl_26 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 217.29pt;
+}
+.stl_27 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 230.04pt;
+}
+.stl_28 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 154.5pt;
+	top: 217.29pt;
+}
+.stl_29 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 154.5pt;
+	top: 230.04pt;
+}
+.stl_30 {
+	position: absolute;
+	line-height: 12pt;
+	left: 154.5pt;
+	top: 242.79pt;
+}
+.stl_31 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 335.2499pt;
+	top: 216.1196pt;
+}
+.stl_32 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 335.2499pt;
+	top: 228.8696pt;
+}
+.stl_33 {
+	position: absolute;
+	line-height: 12pt;
+	left: 335.2499pt;
+	top: 241.6196pt;
+}
+.stl_34 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 366.3749pt;
+	top: 216.1196pt;
+}
+.stl_35 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 376.125pt;
+	top: 228.8696pt;
+}
+.stl_36 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 398.0645pt;
+	top: 216.1196pt;
+}
+.stl_37 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 410.2499pt;
+	top: 228.8696pt;
+}
+.stl_38 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 435.5729pt;
+	top: 216.1196pt;
+}
+.stl_39 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 447.7584pt;
+	top: 228.8696pt;
+}
+.stl_40 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 242.79pt;
+}
+.stl_41 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 366.3749pt;
+	top: 241.6196pt;
+}
+.stl_42 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 398.0645pt;
+	top: 241.6196pt;
+}
+.stl_43 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 435.5729pt;
+	top: 241.6196pt;
+}
+.stl_44 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 268.29pt;
+}
+.stl_45 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 447.7541pt;
+	top: 268.29pt;
+}
+.stl_46 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 50.25pt;
+	top: 293.79pt;
+}
+.stl_47 {
+	position: absolute;
+	line-height: 9.143481pt;
+	left: 442.8791pt;
+	top: 293.79pt;
+}
+.stl_48 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 334.563pt;
+}
+.stl_49 {
+	color: #000000;
+	display: inline;
+	font-size: 8pt;
+	font-family: "Arial";
+}
+.stl_50 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 347.313pt;
+}
+.stl_51 {
+	position: absolute;
+	line-height: 12pt;
+	left: 50.25pt;
+	top: 360.063pt;
+}
+.stl_52 {
+	position: absolute;
+	line-height: 12pt;
+	left: 50.25pt;
+	top: 372.813pt;
+}
+.stl_53 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 347.7702pt;
+	top: 334.563pt;
+}
+.stl_54 {
+	color: #000000;
+	display: inline;
+	font-size: 8pt;
+	font-family: "Arial";
+	font-weight: bold;
+}
+.stl_55 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 368.25pt;
+	top: 384.813pt;
+}
+.stl_56 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 411.813pt;
+}
+.stl_57 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 154.5pt;
+	top: 424.563pt;
+}
+.stl_58 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 450.813pt;
+}
+.stl_59 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 463.563pt;
+}
+.stl_60 {
+	position: absolute;
+	line-height: 8.127539pt;
+	left: 50.25pt;
+	top: 476.313pt;
+}
+.stl_61 {
+	position: absolute;
+	line-height: 12pt;
+	left: 50.25pt;
+	top: 488.313pt;
+}
+.stl_62 {
+	position: absolute;
+	line-height: 10.15942pt;
+	left: 50.25pt;
+	top: 526.7644pt;
+}
+.stl_63 {
+	position: absolute;
+	line-height: 10.15942pt;
+	left: 350.25pt;
+	top: 526.7644pt;
+}
+body > div {
+min-width: 595pt;
+min-height: 842pt;
+}
