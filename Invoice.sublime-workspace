@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"fu",
+				"function"
+			],
+			[
+				"file",
+				"FileAndFolderUtil"
+			],
+			[
 				"for",
 				"for\tfor (…) {…}"
 			],
@@ -36,15 +44,6 @@
 	"buffers":
 	[
 		{
-			"file": "generateInvoice.js",
-			"settings":
-			{
-				"buffer_size": 1131,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Resources/javascripts/ExcelProcessor.js",
 			"settings":
 			{
@@ -54,28 +53,55 @@
 			}
 		},
 		{
-			"file": "Resources/schema/bean/InvoiceDetail.js",
+			"file": "generateInvoice.js",
 			"settings":
 			{
-				"buffer_size": 447,
+				"buffer_size": 2249,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Resources/schema/ExcelJsonSchema.json",
+			"file": "Resources/javascripts/class/Arguments.js",
 			"settings":
 			{
-				"buffer_size": 977,
+				"buffer_size": 388,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Resources/invoiceHtml/SampleInvoice.html",
+			"settings":
+			{
+				"buffer_size": 8816,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Resources/invoiceHtml/style.css",
+			"settings":
+			{
+				"buffer_size": 6385,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Resources/javascripts/HandlebarProcessor.js",
+			"settings":
+			{
+				"buffer_size": 1449,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "/* Handlebar processor */"
 			}
 		},
 		{
 			"file": "Resources/javascripts/class/FileAndFolderUtil.js",
 			"settings":
 			{
-				"buffer_size": 1469,
+				"buffer_size": 2280,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -85,24 +111,6 @@
 			"settings":
 			{
 				"buffer_size": 511,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Resources/javascripts/class/Arguments.js",
-			"settings":
-			{
-				"buffer_size": 350,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Resources/javascripts/base/ArgumentBase.js",
-			"settings":
-			{
-				"buffer_size": 27,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -152,17 +160,21 @@
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Logs",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/config",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/base",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/excelToJson",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema/bean"
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class"
 	],
 	"file_history":
 	[
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml/SampleInvoice_1.pdf",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/base/ArgumentBase.js",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/Arguments.js",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/generateInvoice.js",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema/ExcelJsonSchema.json",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/package.json",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/04a72c27-8536-4072-a135-09c735fd883e.html",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml/style-min.css",
+		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema/bean/InvoiceDetail.js",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/excel.js",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/help.js",
 		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/ArgumentHandler.js",
@@ -244,9 +256,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -254,6 +267,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"createOutputDir",
+			"SampleInvoice.html",
+			"__<",
+			">__",
 			"excelColumnTitle",
 			"\\\n    ",
 			"ProductBrandSuggester",
@@ -303,6 +320,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"}}<",
+			">{{",
 			"",
 			"parent_category_id",
 			"<field name=\"documentType\">CATEGORY</field>\n    </doc>",
@@ -330,16 +349,132 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "Resources/javascripts/ExcelProcessor.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								232,
+								232
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 871.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "generateInvoice.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1131,
+						"buffer_size": 2249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1259,
+								1259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 22.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Resources/javascripts/class/Arguments.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 388,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Resources/invoiceHtml/SampleInvoice.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8816,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4410,
+								4410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Resources/invoiceHtml/style.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 6385,
 						"regions":
 						{
 						},
@@ -352,119 +487,60 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Resources/javascripts/ExcelProcessor.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4300,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2568,
-								2568
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 363.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Resources/schema/bean/InvoiceDetail.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 447,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								176,
-								189
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "Resources/schema/ExcelJsonSchema.json",
+					"buffer": 5,
+					"file": "Resources/javascripts/HandlebarProcessor.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 977,
+						"buffer_size": 1449,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								408,
-								419
+								806,
+								806
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
+							"auto_name": "/* Handlebar processor */",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "Resources/javascripts/class/FileAndFolderUtil.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1469,
+						"buffer_size": 2280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								117,
-								1217
+								1909,
+								1932
 							]
 						],
 						"settings":
@@ -473,14 +549,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 178.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "Resources/config/config.js",
 					"semi_transient": false,
 					"settings":
@@ -509,62 +585,6 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Resources/javascripts/class/Arguments.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 350,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Resources/javascripts/base/ArgumentBase.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 27,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								27,
-								27
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
 					"buffer": 8,
 					"file": "Resources/javascripts/class/DateUtil.js",
 					"semi_transient": false,
@@ -577,8 +597,8 @@
 						"selection":
 						[
 							[
-								672,
-								680
+								359,
+								324
 							]
 						],
 						"settings":
@@ -587,10 +607,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 61.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -635,7 +655,7 @@
 	"project": "Invoice.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

@@ -2,70 +2,64 @@
 var excel = require('exceljs');
 var fs = require('fs');
 var _ = require('underscore');
+var Promise = require('promise');
 
 
 var ExcelProcessor = function ExcelProcessor() {
     // Private
     var invoiceDetailMap = {};
+    var jsonSchema;
     var firstRow;
     this.createInvoice = function(){
-        try{
-            var excelDataAsJson = processExcelAndConvertToJson(); 
-            return true;  
-        }catch(err){
-            throw(err);
-            return false;
-        }
+        readExcelFile().then(createInvoiceHTML,throwError);
         
     }
 
-    this.updateInvoiceSheet = function(){
+    function throwError(ex){
+        logger.error('Error processing Excel file '+ex);
+        throw(ex);
     }
 
-    function processExcelAndConvertToJson(){
-        var jsonData = "";
-        try {
-            readExcelFile();
-
-        }catch(err){
-            throw(err);
-        }
-        
+    function createInvoiceHTML() {
+        console.log(invoiceDetailMap);
+        HandlebarProcessor.processInvoiceTemplate(invoiceDetailMap, jsonSchema); 
     }
 
     function readExcelFile() {
-        
-        try{
-            var workbook = new excel.Workbook(); 
-            workbook.xlsx.readFile(FileAndFolderUtil.getFileToProcess())
-                .then(function() {
-                    var worksheet = workbook.getWorksheet(1);
-                    firstRow = worksheet.getRow(1).values;
-                    if(firstRow === undefined || firstRow == [] || firstRow.length == 0){
-                        throw new Error('First Row is blank. Please add the column title in the first row. Try help (--help) to know the mandatory column and its title.');
-                    }else {
-                        firstRow = inverseArray(firstRow);
-                        var jsonSchema = readJSONSchema(config.getJSONSchemaFilePath());
-                        if(jsonSchema != ''){
-                            jsonSchema = updateJsonSchemaWithColumnIndex(jsonSchema,firstRow);
-                        }
-                    }
-                    
-                    worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
-                        if(rowNumber > 1) {
-                            var invoiceArray = [];
-                            if((!(invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] === undefined)) 
-                                    && invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]].length > 0) {
-                                invoiceArray = invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]];
+        return new Promise(function (resolve, reject){
+            try{
+                var workbook = new excel.Workbook(); 
+                workbook.xlsx.readFile(FileAndFolderUtil.getFileToProcess())
+                    .then(function() {
+                        var worksheet = workbook.getWorksheet(1);
+                        firstRow = worksheet.getRow(1).values;
+                        if(firstRow === undefined || firstRow == [] || firstRow.length == 0){
+                            throw new Error('First Row is blank. Please add the column title in the first row. Try help (--help) to know the mandatory column and its title.');
+                        }else {
+                            firstRow = inverseArray(firstRow);
+                            jsonSchema = readJSONSchema(config.getJSONSchemaFilePath());
+                            if(jsonSchema != ''){
+                                jsonSchema = updateJsonSchemaWithColumnIndex(jsonSchema,firstRow);
                             }
-                            invoiceArray[invoiceArray.length]=row.values;
-                            invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] = invoiceArray;
                         }
-                    });
-                });   
-        }catch(err){
-            throw(err);
-        }
+                        
+                        worksheet.eachRow({ includeEmpty: false }, function(row, rowNumber) {
+                            if(rowNumber > 1) {
+                                var invoiceArray = [];
+                                if((!(invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] === undefined)) 
+                                        && invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]].length > 0) {
+                                    invoiceArray = invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]];
+                                }
+                                invoiceArray[invoiceArray.length]=row.values;
+                                invoiceDetailMap[row.values[jsonSchema.poNumber.columnIndex]] = invoiceArray;
+                            }
+                        });
+                        resolve();
+                    }); 
+            }catch(err){
+                reject(err);
+            }
+        }); 
     }
 
     function writeInvoice(){

@@ -6,15 +6,18 @@ var Argument = require('./Resources/javascripts/class/Arguments.js');
 var argv = require('minimist')(process.argv.slice(2));
 global.config = require('./Resources/config/config.js');
 global.DateUtil = require('./Resources/javascripts/class/DateUtil.js');
+global.HandlebarProcessor = require('./Resources/javascripts/HandlebarProcessor.js');
 global.FileAndFolderUtil = require('./Resources/javascripts/class/FileAndFolderUtil.js');
+global.ConfigJSONUtil = require('./Resources/javascripts/class/ConfigJSONUtil.js');
+global.AnnexureInitialUtil = require('./Resources/javascripts/class/AnnexureInitialUtil.js');
 
 var fs = require('fs');
-var htmlToPdf = require('html-to-pdf');
+//var htmlToPdf = require('html-to-pdf');
 
 
 
-//var pdf = require('html-pdf');
-//var options = { format: 'Letter' };
+var pdf = require('html-pdf');
+var options = { format: 'Letter' };
  
 
 
@@ -25,14 +28,18 @@ if(!(argv.help === undefined)){
 	helpArticle.printHelp();
 }else {
 	try{
+		var abc = "sdsassda";
+		console.log(abc.toUpperCase());
+
+		
 
 		fs.readFile('./Resources/invoiceHtml/SampleInvoice.html', 'utf8', function(err, html){
-			console.log(html);
-			/*pdf.create(html, options).toFile('./Resources/invoiceHtml/SampleInvoice.pdf', function(err, res) {
+			//console.log(html);
+			pdf.create(html, options).toFile('./Resources/invoiceHtml/SampleInvoice_1.pdf', function(err, res) {
 			  if (err) return console.log(err);
 			  console.log(res); // { filename: '/app/businesscard.pdf' } 
-			});*/
-			htmlToPdf.convertHTMLString(html, './Resources/invoiceHtml/SampleInvoice.pdf',
+			});
+			/*htmlToPdf.convertHTMLString(html, './Resources/invoiceHtml/SampleInvoice.pdf',
 			    function (error, success) {
 			        if (error) {
 			            console.log('Oh noes! Errorz!');
@@ -42,7 +49,7 @@ if(!(argv.help === undefined)){
 			            console.log(success);
 			        }
 			    }
-			);
+			);*/
 		});
 
 		// Processing arguments passed.

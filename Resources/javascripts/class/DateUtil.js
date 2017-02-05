@@ -35,7 +35,7 @@ var DateUtil = function DateUtil(){
 		}else {
 			index = this.argumentMonth - 1;
 		}
-		return getThisMonthsName(index);
+		return this.getThisMonthsName(index);
 	}
 
 	this.getCurrentDate = function getCurrentDate() {
@@ -47,8 +47,7 @@ var DateUtil = function DateUtil(){
 		return this.getMonth()+'-'+year;
 	}
 
-	/* Private method */
-	function getThisMonthsName(index) {
+	this.getThisMonthsName = function(index) {
 	
 		return month[index];
 	}

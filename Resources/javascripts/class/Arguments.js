@@ -16,7 +16,9 @@ Argument.prototype.processArgument = function() {
 	FileAndFolderUtil.processArgument(this.argument);
 	// Date & Month
 	DateUtil.processArgument(this.argument.month);
-
-	
+	FileAndFolderUtil.createOutputDir();
+	FileAndFolderUtil.copyCSSAndSVGToOutputDir();
+	ConfigJSONUtil.loadConfigJson();
+	AnnexureInitialUtil.processArgument(this.argument);
 }
 

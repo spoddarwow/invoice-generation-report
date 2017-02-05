@@ -11,9 +11,13 @@
   "dependencies": {
     "dateformat": "^2.0.0",
     "exceljs": "^0.2.32",
+    "fs-extra": "^2.0.0",
+    "handlebars": "^4.0.6",
     "html-pdf": "^2.1.0",
     "html-to-pdf": "^0.1.11",
     "minimist": "^1.2.0",
+    "promise": "^7.1.1",
+    "prompt": "^1.0.0",
     "underscore": "^1.8.3",
     "winston": "^2.2.0"
   }
