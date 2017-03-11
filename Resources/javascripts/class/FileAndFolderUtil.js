@@ -55,6 +55,15 @@ var FileAndFolderUtil = function FileAndFolderUtil() {
 		fsExtra.copy('./Resources/invoiceHtml/style.css',this.getOutputHTMLFolderPath()+'/style.css');
 	}
 
+	this.moveFileAfterInvoiceGeneration = function(source, destination){
+		fsExtra.move(source, destination, function (err) {
+		  if (err) {
+		    throw err;
+		  }
+		  logger.info("-=-=-=-= Mor Invoice generation is complete -=-=-=-=");
+		});
+	}
+
 	this.getFileToProcess = function(){
 		return path.join(this.filePath, this.fileName);
 	}
@@ -73,6 +82,19 @@ var FileAndFolderUtil = function FileAndFolderUtil() {
 
 	this.getOutputHTMLFolderPath = function getOutputHTMLFolderPath() {
 		return path.join(this.getOutputFolder(),'HTML');
+	}
+
+	this.getArchiveFilePath = function() {
+		return path.join(this.getArchiveFolderPath(), this.decorateArchiveFileName());
+	}
+
+	this.decorateArchiveFileName = function() {
+		var finalArchiveName = "";
+		var parsedName = path.parse(this.fileName);
+		finalArchiveName += parsedName.name +'_';
+		finalArchiveName += DateUtil.getCurrentDateWithFormat('yyyy-mm-dd-HH:MM:ss');
+		finalArchiveName += parsedName.ext;
+		return finalArchiveName;
 	}
 };
 

@@ -10,9 +10,13 @@ var ExcelProcessor = function ExcelProcessor() {
     var invoiceDetailMap = {};
     var jsonSchema;
     var firstRow;
+    var isSuccess = true;
     this.createInvoice = function(){
-        readExcelFile().then(createInvoiceHTML,throwError);
         
+        return new Promise(function (resolve, reject){
+            readExcelFile().then(createInvoiceHTML,throwError);
+        }); 
+
     }
 
     function throwError(ex){
@@ -21,8 +25,11 @@ var ExcelProcessor = function ExcelProcessor() {
     }
 
     function createInvoiceHTML() {
-        console.log(invoiceDetailMap);
-        HandlebarProcessor.processInvoiceTemplate(invoiceDetailMap, jsonSchema); 
+        HandlebarProcessor.processInvoiceTemplate(invoiceDetailMap, jsonSchema).then(sendInputFileToArchive,throwError); 
+    }
+
+    function sendInputFileToArchive() {
+        FileAndFolderUtil.moveFileAfterInvoiceGeneration(FileAndFolderUtil.getFileToProcess(),FileAndFolderUtil.getArchiveFilePath());
     }
 
     function readExcelFile() {
@@ -57,6 +64,7 @@ var ExcelProcessor = function ExcelProcessor() {
                         resolve();
                     }); 
             }catch(err){
+                success = false;
                 reject(err);
             }
         }); 

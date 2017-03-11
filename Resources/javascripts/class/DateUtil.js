@@ -51,6 +51,10 @@ var DateUtil = function DateUtil(){
 	
 		return month[index];
 	}
+
+	this.getCurrentDateWithFormat = function(format) {
+		return dateFormat(new Date(), format);
+	}
 }
 
 DateUtil.instance = null;

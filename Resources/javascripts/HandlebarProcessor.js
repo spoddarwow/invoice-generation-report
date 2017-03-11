@@ -10,36 +10,40 @@ var HandlebarProcessor = function HandlebarProcessor() {
 
 	this.processInvoiceTemplate = function(data, jsonSchema){
 
-
 		return new Promise(function (resolve, reject){
 			if((!(data === undefined)) && (!(jsonSchema === undefined))){
-				var html;
-				fs.readFile('./Resources/invoiceHtml/SampleInvoice.html', 'utf-8', function(error, source){
-				  	if(error){ 
-				  		throw(error)
-				  	}else {
-				  		var i = 1;
-				  		for (var key in data) {
-						    if((!(key === undefined && key == 'undefined')) && key != null){
-							    logger.info('Processing the Excel data with PO Number :'+key);
-							    var value = data[key];
-							    if((!(value === undefined)) && value.length > 0){
-									var htmlData = decorateJsonDataForHTML(value,jsonSchema,i);
-									console.log(htmlData);
-									var template = handlebars.compile(source);
-									html = template(htmlData);
-									fs.writeFile(FileAndFolderUtil.getOutputHTMLFolderPath()+'/'+key+'.html', html,
-									 	function(error){
-									   		console.log(error);
-									  	}
-									);	 
+				try {
+					var html;
+					fs.readFile('./Resources/invoiceHtml/SampleInvoice.html', 'utf-8', function(error, source){
+					  	if(error){ 
+					  		success = false;
+					  		throw(error)
+					  	}else {
+					  		var i = 1;
+					  		for (var key in data) {
+							    if((!(key === undefined && key == 'undefined')) && key != null){
+								    logger.info('Processing the Excel data with PO Number :'+key);
+								    var value = data[key];
+								    if((!(value === undefined)) && value.length > 0){
+										var htmlData = decorateJsonDataForHTML(value,jsonSchema,i);
+										var template = handlebars.compile(source);
+										html = template(htmlData);
+										fs.writeFile(FileAndFolderUtil.getOutputHTMLFolderPath()+'/'+key+'.html', html,
+										 	 (err) => {
+											  if (err) throw err;
+											  console.log('It\'s saved!');
+											}
+										);	 
+								    }
 							    }
-						    }
-						    i++;
-						}
-				  	}
-				});
-				console.log('=== Done ===');
+							    i++;
+							}
+					  	}
+					});
+				}catch(err){
+	                success = false;
+	                reject(err);
+	            }
 			}else {
 				logger.error('JSON Schema or Excel Data is empty/failed to process.');
 			}

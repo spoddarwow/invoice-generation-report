@@ -21,6 +21,8 @@ var ConfigJSONUtil = function ConfigJSONUtil() {
         return JSON.parse(fs.readFileSync('./Resources/config.json', 'utf8'));
     }
 
+    
+
 }
 
 ConfigJSONUtil.instance = null;
