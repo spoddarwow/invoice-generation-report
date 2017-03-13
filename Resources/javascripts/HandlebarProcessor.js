@@ -31,7 +31,6 @@ var HandlebarProcessor = function HandlebarProcessor() {
 										fs.writeFile(FileAndFolderUtil.getOutputHTMLFolderPath()+'/'+key+'.html', html,
 										 	 (err) => {
 											  if (err) throw err;
-											  console.log('It\'s saved!');
 											}
 										);	 
 								    }

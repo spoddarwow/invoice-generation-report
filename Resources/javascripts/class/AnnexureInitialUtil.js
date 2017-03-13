@@ -10,7 +10,6 @@ var AnnexureInitialUtil = function AnnexureInitialUtil() {
 			this.annexureInitial = args.annexureInitial;
 		}else {
 			var jsonConfig = ConfigJSONUtil.getConfig();
-			console.log(jsonConfig);
 			if(jsonConfig.annexureInitial === undefined || jsonConfig.annexureInitial == ''){
 				throw('Annexure initial is not passed. Please pass it to process with argument (--annexureInitial).');
 			}else {

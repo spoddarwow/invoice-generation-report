@@ -11,6 +11,7 @@ var ExcelProcessor = function ExcelProcessor() {
     var jsonSchema;
     var firstRow;
     var isSuccess = true;
+
     this.createInvoice = function(){
         
         return new Promise(function (resolve, reject){
@@ -107,7 +108,7 @@ var ExcelProcessor = function ExcelProcessor() {
                     value.columnIndex = firstRow[title];
                     jsonSchema[key] = value;
                 }else {
-                    //throw new Error('Invalid column title in excel sheet. Column title should be '+value.excelColumnTitle);
+                    throw new Error('Invalid column title in excel sheet. Column title should be '+value.excelColumnTitle);
                 }
             }
         }

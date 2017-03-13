@@ -92,7 +92,7 @@ var FileAndFolderUtil = function FileAndFolderUtil() {
 		var finalArchiveName = "";
 		var parsedName = path.parse(this.fileName);
 		finalArchiveName += parsedName.name +'_';
-		finalArchiveName += DateUtil.getCurrentDateWithFormat('yyyy-mm-dd-HH:MM:ss');
+		finalArchiveName += DateUtil.getCurrentDateWithFormat("isoDate");
 		finalArchiveName += parsedName.ext;
 		return finalArchiveName;
 	}

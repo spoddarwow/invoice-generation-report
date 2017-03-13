@@ -29,7 +29,7 @@ if(!(argv.help === undefined)){
 		args.processArgument();
 		// Processing excel passed.
 		var excel = new ExcelProcessor();
-		excel.createInvoice().then(succcess,error);
+		excel.createInvoice().then(succcessFunction,errorFunction);
 		
 	}catch (error) {
     	logger.error(error);
@@ -37,11 +37,11 @@ if(!(argv.help === undefined)){
 	}
 }
 
-function succcess(){
-	logger.info("-=-=-=-= Mor Invoice generation is complete -=-=-=-=");
+function succcessFunction(){
+	//logger.info("-=-=-=-= Mor Invoice generation is complete -=-=-=-=");
 }
 
-function error(){
+function errorFunction(){
 	success = false;
 	logger.info("-=-=-=-= Mor Invoice generation has failed -=-=-=-=");
 }
