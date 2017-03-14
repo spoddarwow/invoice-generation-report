@@ -1,6 +1,6 @@
 # invoice-generation-report
 
-The objective of this code base is to automate the generation of the invoice based on the excel (XLS/XLSX). The utility is build on NodeJS and uses multiple mpm modules to achive the goal (listed below).
+The objective of this code base is to automate the generation of the invoice based on the excel (XLS/XLSX). The utility is build on NodeJS and uses multiple mpm modules to achieve the goal (listed below).
 
 ## NPM Installed
 
@@ -89,3 +89,8 @@ Below are the steps required to be done as a part of installation:
 	2. **Resources\invoiceHtml** : Sample HTML files used to create the invoices.
 	3. **Resources\javascripts** : Javascript files.
 	4. **Resources\schema** : Schema to describe the excel column location.
+
+## Task pending
+
+- [ ] Create custom HTML for invoice. It should be as light and small in size as possible. Problem currently is to create it with minimal size.
+- [ ] Call HTML-PDF conversion.
