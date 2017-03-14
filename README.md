@@ -36,3 +36,13 @@ The objective of this code base is to automate the generation of the invoice bas
 	1. Reference: https://www.npmjs.com/package/winston
 	2. Version: 2.2.0
 	3. Uses: Used for logger.
+
+## Installation
+
+Below are the steps required to be done as a part of installation:
+
+	1. Download & Install the NodeJS. Refer https://nodejs.org/en/download/.
+	2. Clone or Download the *master* branch of this repo.
+	3. Open command prompt(cmd) and change the drive to the location of the repo. (cmd: cd <Repo_Location>)
+	4. Run command (mentioned below) to install all the npm modules required to run this. 
+		1. npm install	
