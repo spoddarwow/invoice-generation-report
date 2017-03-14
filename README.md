@@ -46,3 +46,26 @@ Below are the steps required to be done as a part of installation:
 	3. Open command prompt(cmd) and change the drive to the location of the repo. (cmd: cd <Repo_Location>)
 	4. Run command (mentioned below) to install all the npm modules required to run this. 
 		1. npm install	
+## Command to run
+
+**node generateInvoice.js --fileName=Demo.xlsx <parameters>**
+
+### Parameters
+1. --fileName :- Name of the file to process. The file lookup will be done in ./Files/Input/Excel. **Mandatory**
+
+2. --filePath :- Custom file path to look file to process for. Default file path is ./Files/Input/Excel
+
+3. --month :- Month for which invoice has to generate. It will also me used to identify the column in excel file. Default month is the current month. Format - MM/MMMMMMMMMM.
+
+4. --annexureInitial :- Annexure Initial code is used to build the invoice's annexure number. Default is VK and is available in config file './Resources/config.json'
+
+5. --help :- Open the help article and explains possible parameters, its syntax and details.
+
+### Example
+
+1. Open Help - if --help is available, it will ignore the other parameter and only display help.
+	node generateInvoice.js --help
+2. Adding month - if we need to process the details for August. Column title should be Projected Effort (_month_).
+	node generateInvoice.js --fileName=Demo.xlsx --month=8
+3. Adding annexure initial
+	node generateInvoice.js --fileName=Demo.xlsx --month=8 --annexureInitial=SP
