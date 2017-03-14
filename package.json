@@ -2,7 +2,7 @@
   "name": "mor-generate-invoice",
   "version": "1.0.0",
   "description": "This nodejs application will be used to read billing sheet of MOR and create invoice PDF",
-  "main": "main.js",
+  "main": "generateInvoice.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
