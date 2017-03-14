@@ -73,3 +73,19 @@ Below are the steps required to be done as a part of installation:
 ## Project folder structure
 
 ![picture](Project_Structure.png)
+
+### Folder
+
+1. **Files\Input\Excel** : Default location of the input invoice excel file until passed as an argument in parameter --filePath. Permissible file format is .XLS and .XLSX. 
+2. **Files\Output** : Output file location. 
+	1. **Files\Output\Mar-17** : A folder with the month (default or passed as an argument) and year (MMM-YY) will be created if not available.
+		1. **Files\Output\Mar-17\Archive** : Archive folder where the processed file will be moved from Input location. 
+		2. **Files\Output\Mar-17\HTML** : HTML folder where the invoice HTML will be generated.
+		3. **Files\Output\Mar-17\PDF** : Folder where the respective PDF will be generated using the HTML in HTML folder.
+3. **Logs** : Log file folder.
+4. **node_modules** : Node js module folder
+5. **Resources** : Main folder for all the files required for processing.
+	1. **Resources\config** : Configuration required to process the data.
+	2. **Resources\invoiceHtml** : Sample HTML files used to create the invoices.
+	3. **Resources\javascripts** : Javascript files.
+	4. **Resources\schema** : Schema to describe the excel column location.
