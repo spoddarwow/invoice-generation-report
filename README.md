@@ -69,3 +69,7 @@ Below are the steps required to be done as a part of installation:
 	node generateInvoice.js --fileName=Demo.xlsx --month=8
 3. Adding annexure initial
 	node generateInvoice.js --fileName=Demo.xlsx --month=8 --annexureInitial=SP
+
+## Project folder structure
+
+![picture](Project_Structure.png)
