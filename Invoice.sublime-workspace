@@ -4,24 +4,20 @@
 		"selected_items":
 		[
 			[
-				"fun",
-				"function"
-			],
-			[
-				"fu",
-				"function"
-			],
-			[
-				"file",
-				"FileAndFolderUtil"
+				"pro",
+				"projectNameValue"
 			],
 			[
 				"for",
-				"for\tfor (…) {…}"
+				"for	for (…) {…}"
 			],
 			[
 				"get",
-				"getOutputFolderPath"
+				"getInstance"
+			],
+			[
+				"xl",
+				"xlsx"
 			],
 			[
 				"Date",
@@ -30,10 +26,6 @@
 			[
 				"ge",
 				"getMonth"
-			],
-			[
-				"pro",
-				"prototype"
 			],
 			[
 				"err",
@@ -52,35 +44,7 @@
 			"settings":
 			{
 				"buffer_size": 519,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Resources/javascripts/class/ConfigJsonUtil.js",
-			"settings":
-			{
-				"buffer_size": 684,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "generateInvoice.js",
-			"settings":
-			{
-				"buffer_size": 1667,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Resources/javascripts/ExcelProcessor.js",
-			"settings":
-			{
-				"buffer_size": 4792,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -88,57 +52,99 @@
 			"settings":
 			{
 				"buffer_size": 1478,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Resources/javascripts/class/FileAndFolderUtil.js",
+			"file": "generateInvoice.js",
 			"settings":
 			{
-				"buffer_size": 3230,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 1667,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "Searching 13 files for \"Processing the Excel data with PO Numbe\"\n\n/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/HandlebarProcessor.js:\n   23  \t\t\t\t\t  \t\tfor (var key in data) {\n   24  \t\t\t\t\t\t\t    if((!(key === undefined && key == 'undefined')) && key != null){\n   25: \t\t\t\t\t\t\t\t    logger.info('Processing the Excel data with PO Number :'+key);\n   26  \t\t\t\t\t\t\t\t    var value = data[key];\n   27  \t\t\t\t\t\t\t\t    if((!(value === undefined)) && value.length > 0){\n\n1 match in 1 file\n",
+			"file": "Resources/javascripts/ExcelProcessor.js",
 			"settings":
 			{
-				"buffer_size": 514,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
+				"buffer_size": 4792,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "Resources/javascripts/class/AnnexureInitialUtil.js",
+			"file": "Resources/schema/ExcelJsonSchema.json",
 			"settings":
 			{
-				"buffer_size": 933,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 977,
+				"line_ending": "Windows",
+				"name": "{"
 			}
 		},
 		{
-			"file": "Resources/javascripts/HandlebarProcessor.js",
+			"file": "Resources/schema/bean/InvoicedProjectDetail.js",
 			"settings":
 			{
-				"buffer_size": 3402,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
+				"buffer_size": 1423,
+				"line_ending": "Windows",
+				"name": "/* Project Detail */"
+			}
+		},
+		{
+			"file": "Resources/schema/bean/InvoiceDetail.js",
+			"settings":
+			{
+				"buffer_size": 447,
+				"line_ending": "Windows",
+				"name": "/* Invoice detail */"
+			}
+		},
+		{
+			"file": "Resources/schema/bean/EmployeeDetail.js",
+			"settings":
+			{
+				"buffer_size": 899,
+				"line_ending": "Windows",
+				"name": "/* Employee Detail */"
+			}
+		},
+		{
+			"file": "Resources/javascripts/excelToJson/ExcelJsonMapper.js",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Windows",
+				"name": "/* Class to map column index to JSON variable */"
+			}
+		},
+		{
+			"file": "To DO List.txt",
+			"settings":
+			{
+				"buffer_size": 139,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Resources/config/config.js",
+			"settings":
+			{
+				"buffer_size": 511,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 574,
+				"line_ending": "Windows"
 			}
 		}
 	],
 	"build_system": "",
-	"build_system_choices":
-	[
-	],
-	"build_varint": "",
 	"command_palette":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -146,10 +152,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
-		"history":
-		[
-		]
+		"height": 0.0
 	},
 	"distraction_free":
 	{
@@ -160,37 +163,19 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Logs",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class"
-	],
 	"file_history":
 	[
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/README.md",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/ExcelProcessor.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/generateInvoice.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml/SampleInvoice.html",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/HandlebarProcessor.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/FileAndFolderUtil.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/config/config.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/DateUtil.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml/SampleInvoice_1.pdf",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/base/ArgumentBase.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/Arguments.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema/ExcelJsonSchema.json",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/package.json",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/04a72c27-8536-4072-a135-09c735fd883e.html",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/invoiceHtml/style-min.css",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/schema/bean/InvoiceDetail.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/excel.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/help.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/ArgumentHandler.js",
-		"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts/class/Month.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/schema/poc.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/To DO List.txt",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/class/ArgumentHandler.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/config/config.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/generateInvoice.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/class/Arguments.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/class/DateUtil.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/class/FileAndFolder.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/help.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/excel.js",
+		"/C/Users/xspro/Software/Git_Repo_Luna/30092016/invoice-generation-report/Resources/javascripts/class/Month.js",
 		"/Volumes/External-Drive/Sumit/My-Work/MOR-Generate-Invoice/Resources/javascripts/class/ArgumentHandler",
 		"/Volumes/External-Drive/Sumit/My-Work/MOR-Generate-Invoice/Resources/config/config.js",
 		"/Volumes/External-Drive/Sumit/My-Work/MOR-Generate-Invoice/Resources/javascripts/class/Arguments.js",
@@ -264,15 +249,13 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
-			"/Volumes/External-Drive/Sumit/My-Work/Git/invoice-generation-report/Resources/javascripts",
-			""
 		]
 	},
 	"find_state":
@@ -280,17 +263,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Processing the Excel data with PO Numbe",
-			"Processing the Excel data with PO Number",
-			"console.log",
-			"}\n",
-			"Mor Invoice has been generated",
-			"console",
-			"createOutputDir",
-			"SampleInvoice.html",
-			"__<",
-			">__",
-			"excelColumnTitle",
 			"\\\n    ",
 			"ProductBrandSuggester",
 			"/suggest",
@@ -319,10 +291,10 @@
 			"9223372036854775807",
 			"dm_325",
 			"|",
-			"\t\t",
+			"		",
 			"Whisky",
 			"2534374302025910",
-			"\t\t",
+			"		",
 			"dm_844<",
 			"dm_844",
 			"categoryIds",
@@ -339,8 +311,6 @@
 		"regex": false,
 		"replace_history":
 		[
-			"}}<",
-			">{{",
 			"",
 			"parent_category_id",
 			"<field name=\"documentType\">CATEGORY</field>\n    </doc>",
@@ -368,13 +338,12 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 11,
 			"sheets":
 			[
 				{
 					"buffer": 0,
 					"file": "Resources/javascripts/class/Arguments.js",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 519,
@@ -384,112 +353,23 @@
 						"selection":
 						[
 							[
-								428,
-								383
+								519,
+								519
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Resources/javascripts/class/ConfigJsonUtil.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 684,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								437,
-								437
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "generateInvoice.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1667,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1463,
-								1463
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Resources/javascripts/ExcelProcessor.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4792,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								937,
-								937
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 441.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "Resources/javascripts/class/DateUtil.js",
-					"semi_transient": false,
 					"settings":
 					{
 						"buffer_size": 1478,
@@ -499,153 +379,292 @@
 						"selection":
 						[
 							[
-								1248,
-								1248
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "generateInvoice.js",
+					"settings":
+					{
+						"buffer_size": 1667,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1384,
+								1384
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 456.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Resources/javascripts/ExcelProcessor.js",
+					"settings":
+					{
+						"buffer_size": 4792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Resources/schema/ExcelJsonSchema.json",
+					"settings":
+					{
+						"buffer_size": 977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 465.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "Resources/javascripts/class/FileAndFolderUtil.js",
-					"semi_transient": false,
+					"file": "Resources/schema/bean/InvoicedProjectDetail.js",
 					"settings":
 					{
-						"buffer_size": 3230,
+						"buffer_size": 1423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2906,
-								2906
+								465,
+								465
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"auto_name": "/* Project Detail */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 718.0,
+						"translation.y": 108.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"semi_transient": false,
+					"file": "Resources/schema/bean/InvoiceDetail.js",
 					"settings":
 					{
-						"buffer_size": 514,
+						"buffer_size": 447,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										334,
-										373
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								357,
-								357
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"auto_name": "/* Invoice detail */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "Resources/javascripts/class/AnnexureInitialUtil.js",
-					"semi_transient": false,
+					"file": "Resources/schema/bean/EmployeeDetail.js",
 					"settings":
 					{
-						"buffer_size": 933,
+						"buffer_size": 899,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								336,
-								336
+								467,
+								467
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"auto_name": "/* Employee Detail */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "Resources/javascripts/HandlebarProcessor.js",
-					"semi_transient": false,
+					"file": "Resources/javascripts/excelToJson/ExcelJsonMapper.js",
 					"settings":
 					{
-						"buffer_size": 3402,
+						"buffer_size": 347,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								820,
-								820
+								102,
+								102
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"auto_name": "/* Class to map column index to JSON variable */",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "To DO List.txt",
+					"settings":
+					{
+						"buffer_size": 139,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								57,
+								57
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "Resources/config/config.js",
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								511
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				}
 			]
@@ -657,7 +676,7 @@
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -686,17 +705,14 @@
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
-	"project": "Invoice.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -705,32 +721,15 @@
 	"select_project":
 	{
 		"height": 0.0,
-		"last_filter": "",
 		"selected_items":
 		[
 		],
 		"width": 0.0
-	},
-	"select_symbol":
-	{
-		"height": 0.0,
-		"last_filter": "",
-		"selected_items":
-		[
-		],
-		"width": 0.0
-	},
-	"selected_group": 0,
-	"settings":
-	{
 	},
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 250.0,
-	"status_bar_visible": true,
-	"template_settings":
-	{
-	}
+	"side_bar_width": 204.0,
+	"status_bar_visible": true
 }
