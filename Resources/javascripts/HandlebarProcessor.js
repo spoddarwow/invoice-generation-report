@@ -1,9 +1,9 @@
 /* Handlebar processor */
 var handlebars = require('handlebars');
+var handlebarsIntl = require('handlebars-intl');
 var fs = require('fs');
 var _ = require('underscore');
 var Promise = require('promise');
-
 
 var HandlebarProcessor = function HandlebarProcessor() {
     
@@ -94,6 +94,7 @@ HandlebarProcessor.instance = null;
 HandlebarProcessor.getInstance = function () {
     if (this.instance === null) {
         this.instance = new HandlebarProcessor();
+        handlebarsIntl.registerWith(handlebars);
     }
     return this.instance;
 }

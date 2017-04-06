@@ -51,7 +51,8 @@ var FileAndFolderUtil = function FileAndFolderUtil() {
 	}
 
 	this.copyCSSAndSVGToOutputDir = function(){
-		fsExtra.copy('./Resources/invoiceHtml/img_01.svg',this.getOutputHTMLFolderPath()+'/img_01.svg');
+		fsExtra.copy('./Resources/invoiceHtml/bootstrap.min.css',this.getOutputHTMLFolderPath()+'/bootstrap.min.css');
+		fsExtra.copy('./Resources/invoiceHtml/logo.jpg',this.getOutputHTMLFolderPath()+'/logo.jpg');
 		fsExtra.copy('./Resources/invoiceHtml/style.css',this.getOutputHTMLFolderPath()+'/style.css');
 	}
 

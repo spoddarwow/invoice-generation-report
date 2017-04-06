@@ -13,6 +13,7 @@
     "exceljs": "^0.2.32",
     "fs-extra": "^2.0.0",
     "handlebars": "^4.0.6",
+    "handlebars-intl": "^1.1.2",
     "html-pdf": "^2.1.0",
     "html-to-pdf": "^0.1.11",
     "minimist": "^1.2.0",
